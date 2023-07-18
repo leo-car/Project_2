@@ -14,6 +14,7 @@ require('./config/database');
 require("./config/passport");
 
 const indexRouter = require('./routes/index');
+const sneakerRouter = require('./routes/sneakers')
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use(function(req, res, next) {
 
 // ROUTES BEGIN HERE
 app.use('/', indexRouter);
+app.use('/sneakers', sneakerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
