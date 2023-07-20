@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<h2>Sneaker List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Size</th>
+      <th>Sold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Write the line of EJS to iterate over movies using forEach -->
+      <tr>
+        <td><%= m.name %></td>
+        <td><%= m.brand %></td>
+        <td><%= m.size %></td>
+        <!-- finish the ternary expression to display 'Yes' or 'Nope' -->
+        <td><%= m.sold ?  %></td>
+      </tr>
+    <!-- Close the forEach using EJS here -->
+  </tbody>
+</table>
+
+<%- include('../partials/header') %>

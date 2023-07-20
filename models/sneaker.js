@@ -7,9 +7,8 @@ const sneakerSchema = new Schema({
     Brand: String,
     Size: Number,
     Sold: Boolean
-    }, {
-        timestamps: true
     }
-})
-
-module.exports = mongoose.model('Sneaker,' sneakerSchema), sneakerSchema;
+    
+  });
+  
+  module.exports = mongoose.model('Sneaker', sneakerSchema), sneakerSchema;

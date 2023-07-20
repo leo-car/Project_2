@@ -5,4 +5,6 @@ const sneakersCtrl = require('../controllers/sneakers');
 
 router.get('/new', sneakersCtrl.new);
 
+router.post('/', sneakersCtrl.create);
+
 module.exports = router;
