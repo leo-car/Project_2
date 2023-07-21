@@ -2,7 +2,7 @@
 
 Kicks on Fly 
 
-Here's is the app that I developed to organize my shoes and popular shirts.
+Here's is the app that I developed to organize my shoes and popular shirts based on my preferred database. I also wanted to figure out which sneakers and apparel has to go.
 
 
 ## How To Use
