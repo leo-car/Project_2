@@ -1,0 +1,66 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+  <div>Name: </div>
+  <div><%= sneaker.name %></div>
+  <div>Brand: </div>
+  <div><%= sneaker.brand %></div>
+  <div>Size: </div>
+  <div><%= sneaker.size %></div>
+  <div>Sold: </div>
+  <div><%= sneaker.sold ? 'Yes' : 'No' %></div>
+</section>
+
+<br><br><br><br><h2>Reviews</h2>
+<% if (user){ %>
+<form id="add-review-form" method="POST"
+  action="/sneakers/<%= sneaker._id %>/reviews">
+  <label>Review:</label>
+  <textarea name="content"></textarea>
+  <label>Rating:</label>
+  <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5" selected>5</option>
+  </select>
+  <input type="submit" value="Add Review">
+</form>
+<% } %>
+
+<% if (sneaker.review) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Review</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Yep, we can define variables! -->
+      <% let total = 0 %>
+      <% sneaker.reviews.forEach(function(r) { %>
+        <!-- Accumulate the total rating -->
+        <% total += r.rating %>
+        <tr>
+          <!-- .toLocaleDateString() provides a more friendly date format -->
+          <td><%= r.createdAt.toLocaleDateString() %></td>
+          <td><%= r.content %></td>
+          <td><%= r.rating %></td>
+        </tr>
+      <% }); %>
+      <!-- Add a row to display the avg AFTER the forEach iteration  -->
+      <tr>
+        <td colspan="2"></td>
+        <td><strong><%= (total / sneaker.reviews.length).toFixed(1) %></strong></td>
+      </tr>
+    </tbody>
+  </table>
+<% } else { %>
+  <h5>No Reviews Yet</h5>
+  
+<% } %>
+  
+<%- include('../partials/footer') %>

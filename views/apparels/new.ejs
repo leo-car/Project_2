@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
-<h2>Add Sneaker</h2>
-<form action="/sneakers" method="POST">
+<h2>Add Apparel</h2>
+<form action="/apparels" method="POST">
   <label>Name:
     <input type="text" name="name">
   </label><br>
@@ -9,15 +9,17 @@
     <input type="text" name="brand">
   </label><br>
   <label>Size:
-    <input type="number" name="size">
+  <select name="Size">
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
   </label><br>
   <label>Sold:
     <input type="checkbox" name="Sold" checked>
   </label><br>
-  <button type="submit">Add Sneaker</button>
+  <button type="submit">Add Apparel</button>
 </form>
 <p><%= errorMsg %></p>
-
-
 
 <%- include('../partials/footer') %>

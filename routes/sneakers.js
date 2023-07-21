@@ -1,10 +1,16 @@
 var express = require('express');
 var router = express.Router();
-
 const sneakersCtrl = require('../controllers/sneakers');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-router.get('/new', sneakersCtrl.new);
+router.get('/', sneakersCtrl.index);
 
-router.post('/', sneakersCtrl.create);
+router.get('/new', ensureLoggedIn, sneakersCtrl.new);
+
+router.get('/:id', sneakersCtrl.show);
+
+router.post('/', ensureLoggedIn, sneakersCtrl.create);
+
+
 
 module.exports = router;
