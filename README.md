@@ -33,7 +33,6 @@ Node.js, Express, Mongoose, MongoDB
 
 ## Screenshots
 
-<img width="609" alt="Screenshot 2023-07-21 at 9 02 11 AM" src="https://github.com/leo-car/Project_2/assets/26366719/9b6c4d2e-ec00-4d9f-86f8-2e873e1964dc">
 <img width="1495" alt="Screenshot 2023-07-21 at 9 51 15 AM" src="https://github.com/leo-car/Project_2/assets/26366719/91a6dcfd-76af-46b6-ae25-4290e0e7dc55">
 <img width="1498" alt="Screenshot 2023-07-21 at 9 51 01 AM" src="https://github.com/leo-car/Project_2/assets/26366719/dd9374ab-ac94-4773-9e86-5cc46a523fbf">
 
