@@ -10,6 +10,14 @@ Here's is the app that I developed to organize my shoes and popular shirts.
 Go to my Github page (https://github.com/leo-car/Project_2) and clone the link. Open it up on a text editor run it on a live server or nodemon.
 Sign in your email to leave reviews and comments.
 
+## Getting Started
+
+localhost:3000/sneakers
+
+
+## Trello
+
+https://trello.com/b/o7wSHI3R/project2
 
 ## Technologies that were used
 
